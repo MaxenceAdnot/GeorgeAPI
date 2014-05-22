@@ -3,3 +3,10 @@ python:
 - '3.4'
 install: pip install -r requirements.txt
 script: nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: dfvqV6v4mRnBNcR3EQHVF4NMlyMBJuxbyKh+NxSx+4Qqi8Y90GJdBBOyGCHww7dYE1K5MJSyQDw0Xk1DoSwSS0Es295IUE2swt5iWBzXG7x32MXrQKZfQg/2HxS7LdU+PzCgPj1FzkNgnei1aE3s9pdhNqRNGhY1ifFBGa0ftFo=
+  app: georgeapi
+  on:
+    repo: MaxenceAdnot/GeorgeAPI

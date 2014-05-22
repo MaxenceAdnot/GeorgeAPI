@@ -1,7 +1,8 @@
 import sqlite3
 import os
 
-class GrandDetournementApi(object):
+
+class GrandDetournementApi:
 
     def __init__(self):
         self.__openingDB()
@@ -9,6 +10,15 @@ class GrandDetournementApi(object):
     def __del__(self):
         self.__closingDB()
 
+    def __openingDB(self):
+        if os.path.exists("granddetournement.db"):
+            self.db_desc = sqlite3.connect("granddetournement.db")
+        else:
+            self.db_desc = sqlite3.connect(":memory:")
+
+    def __closingDB(self):
+        self.db_desc.close()
+    
     def returnQuote(self):
         try:
             cur = self.db_desc.cursor()
@@ -20,16 +30,3 @@ class GrandDetournementApi(object):
             quote = "Try again something went wrong"
         
         return str("%s : %s" % (character, quote))
-
-    def __openingDB(self):
-        if not os.path.exists("granddetournement.db"):
-            self.db_desc = sqlite3.connect("granddetournement.db")
-        else:
-            self.db_desc = sqlite3.connect(":memory:")
-
-    def __closingDB(self):
-        self.db_desc.close()
-
-
-if __name__ == "__main__":
-    print(GrandDetournementApi().returnQuote())

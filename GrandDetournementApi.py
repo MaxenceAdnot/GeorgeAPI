@@ -31,3 +31,4 @@ class GrandDetournementApi:
         
         return str("%s : %s" % (character, quote))
         
+        

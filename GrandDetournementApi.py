@@ -30,3 +30,4 @@ class GrandDetournementApi:
             quote = "Try again something went wrong"
         
         return str("%s : %s" % (character, quote))
+        

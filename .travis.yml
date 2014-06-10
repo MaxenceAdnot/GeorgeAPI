@@ -6,7 +6,7 @@ script: nosetests
 deploy:
   provider: heroku
   api_key:
-    secure: dfvqV6v4mRnBNcR3EQHVF4NMlyMBJuxbyKh+NxSx+4Qqi8Y90GJdBBOyGCHww7dYE1K5MJSyQDw0Xk1DoSwSS0Es295IUE2swt5iWBzXG7x32MXrQKZfQg/2HxS7LdU+PzCgPj1FzkNgnei1aE3s9pdhNqRNGhY1ifFBGa0ftFo=
+    secure: UHuQevqycL8xpKoT/Nn2+pV3OXUuJNX3uH0arh1uJIHOGTKoj9xKPyX8nFFQ9vwxdSKgnlRaUsW5yljTdYQuMrm/CSxd6YZ3ky2SlK5aEuiuXAPt81DxyxadzYH/pyGC24zWS8KfLUqQkYRqufGk+QqFNEYoEaKPkWXUmtDXvdI=
   app: georgeapi
   on:
     repo: MaxenceAdnot/GeorgeAPI

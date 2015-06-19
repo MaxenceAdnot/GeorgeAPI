@@ -2,3 +2,8 @@ image: python:3
 script: 
     - pip install -r requirements.txt
     - nosetests
+deploy:
+  git:
+    target: ssh://git@lab.restack.eu:2222/george.git
+    branch: master
+    force: false

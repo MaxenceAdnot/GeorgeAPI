@@ -4,6 +4,6 @@ script:
     - nosetests
 deploy:
   git:
-    target: ssh://git@lab.restack.eu:2222/george.git
+    target: ssh://git@deis.lab.restack.eu:2222/george.git
     branch: master
     force: false
